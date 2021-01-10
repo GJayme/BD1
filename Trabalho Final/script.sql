@@ -34,8 +34,8 @@ CREATE TABLE venda(
     valor_pedido	DECIMAL(13,4),
     tipo_pagamento	VARCHAR(50),
     data_pedido		TIMESTAMP,
-    cpf_cliente		VARCHAR(14) UNIQUE NOT NULL,
-    cpf_funcionario	VARCHAR(14) UNIQUE NOT NULL,
+    cpf_cliente		VARCHAR(14) NOT NULL,
+    cpf_funcionario	VARCHAR(14) NOT NULL,
     PRIMARY KEY(id),
     CONSTRAINT venda_cpf_cliente FOREIGN KEY(cpf_cliente) REFERENCES cliente(cpf),
     CONSTRAINT venda_cpf_funcionario FOREIGN KEY(cpf_funcionario) REFERENCES funcionario(cpf)

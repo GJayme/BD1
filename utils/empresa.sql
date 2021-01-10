@@ -1,3 +1,4 @@
+drop database if exists empresa;
 create database empresa;
 use empresa;
 
